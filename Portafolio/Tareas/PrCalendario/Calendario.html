@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CONTROL+K+C -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--<link rel="stylesheet" type="text/css" href="../../../estilos/estilo.css"> para referrenciar carpetas fuera de la que estamos trabajando-->
+    <link rel="stylesheet" type="text/css" href="./Calendario.css">
+    <script type="text/javascript" src="./Calendario.js"></script>
+</head>
+
+<body>
+    <h1>Mi Calendario - Lery Sanchez Calderón</h1>
+    <div id="calendario">
+        <div id="anterior" onclick="mesantes()">
+            <!-- Area 1-->
+
+        </div>
+        <div id="posterior" onclick="mesdespues()">
+
+        </div>
+        <h2 id="titulos">
+
+        </h2>
+        <table id="diasc">
+            <!-- Area 2-->
+            <!--tr#fila>th*7-->
+            <tr id="fila0">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <!--tr#fila$*7>td*7-->
+            <tr id="fila1">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="fila2">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="fila3">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="fila4">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="fila5">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="fila6">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="fila7">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <!-- Area 3 -->
+        <!-- #fechaactual>i{Hoy: } -->
+        <div id="fechaactual"><i onclick="actualizar()">Hoy: </i></div>
+        <!-- Area 4 -->
+        <div id="buscafecha">
+            <form action="#" name="buscar">
+                <p>Buscar ... MES
+                    <select name="buscames">
+                        <!-- opt*12 -->
+                        <option value="0">Enero</option>
+                        <option value="1">Febrero</option>
+                        <option value="2">Marzo</option>
+                        <option value="3">Abril</option>
+                        <option value="4">Mayo</option>
+                        <option value="5">Junio</option>
+                        <option value="6">Julio</option>
+                        <option value="7">Agosto</option>
+                        <option value="8">Septiembre</option>
+                        <option value="9">Octubre</option>
+                        <option value="10">Noviembre</option>
+                        <option value="11">Diciembre</option>
+                    </select>
+                    ...AÑO...
+                    <input type="text" name="buscaanno" maxlength="4" size="4">
+                    ...
+                    <input type="button" value="BUSCAR" onclick="mifecha()">
+                </p>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
