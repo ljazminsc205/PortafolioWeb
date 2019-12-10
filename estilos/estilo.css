@@ -1,0 +1,252 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ @font-face {
+     font-family: font-scrap;
+     src: url(../fonts/scrap-it-up/ScrapItUp.ttf);
+ }
+
+ @font-face {
+     font-family: font-shink;
+     src: url(../fonts/Shink\ Font\ by\ Rifki\ \(7NTypes\).otf);
+ }
+
+ @font-face {
+     font-family: font-yessy;
+     src: url(../fonts/Yessy\ Font\ by\ Situjuh\ \(7NTypes\).otf);
+ }
+
+ @font-face {
+     font-family: font-hello;
+     src: url(../fonts/Hello.ttf);
+ }
+
+ :root {
+     --color-1: #1de9b6;
+     --color-2: #FAF3DD;
+     --color-3: #ef9a9a;
+     --color-4: #FE9C8F;
+     --color-7: #e57373;
+     --color-5: #FAFBE9;
+     --color-6: #01CA94;
+     --color-8: rgb(45, 112, 94);
+     --color-9: rgb(63, 165, 157, 1);
+     --color-degradado-verde1: rgba(63, 165, 157, 1) 7%, rgb(29, 163, 127) 40%, rgba(129, 216, 208, 1) 60%, rgb(48, 175, 141) 80%, rgba(129, 216, 208, 1) 100%;
+     --color-degradado-verde-rosado: rgba(229, 115, 115, 1) 25%, rgba(1, 202, 148, 1) 40%, rgba(239, 154, 154, 1) 60%, rgba(1, 202, 148, 1) 80%, rgba(255, 205, 210, 1) 100%;
+     --color-degradado-rosado1: rgb(209, 121, 121) 25%, rgba(239, 154, 154, 1) 40%, rgb(207, 93, 93) 60%, rgb(194, 84, 95) 80%, rgba(229, 115, 115, 1) 100%;
+     --color-degradado-rosado2: rgb(194, 84, 95), rgba(229, 115, 115, 1), rgba(239, 154, 154, 1);
+     /*var(--color-background); para hacer uso de ella*/
+ }
+
+ .header-contenedor {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     border: 1px solid var(--color-7);
+ }
+
+ header {
+     background: var(--color-2);
+     height: 21vh;
+     display: block;
+     color: var(--color-5);
+     position: relative;
+ }
+
+ .contenedorPrincipal {
+     width: 100%;
+     height: 100%;
+     margin-top: 21vh;
+     display: flex;
+     justify-content: center;
+     padding: 5px;
+     border: 1px solid var(--color-7);
+     background-image: url("../ImagenesWeb/fondo.jpg");
+     /* The image used */
+     background-color: #cccccc;
+     /* Used if the image is unavailable */
+     background-position: center;
+     /* Center the image */
+     background-repeat: no-repeat;
+     /* Do not repeat the image */
+     background-size: cover;
+     /* Resize the background image to cover the entire container */
+ }
+
+ .texto {
+     background: linear-gradient(to bottom, var(--color-degradado-verde1));
+     -webkit-background-clip: text;
+     color: transparent;
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     font-size: 60px;
+     font-family: font-hello;
+     text-align: right;
+     margin-top: 40px;
+     margin-right: 20px;
+ }
+
+ .imagen1 {
+     width: 10%;
+     margin-top: 3px;
+     margin-left: 2px;
+ }
+
+ .imagen1:hover {
+     animation: animacionImagen1 0.9s;
+ }
+
+ @keyframes animacionImagen1 {
+     0% {
+         transform: rotateZ(20deg);
+     }
+     25% {
+         transform: rotateZ(-20deg);
+     }
+     50% {
+         transform: rotateZ(20deg);
+     }
+     75% {
+         transform: rotateZ(-20deg);
+     }
+     100% {
+         transform: rotateZ(20deg);
+     }
+ }
+
+ .asides {
+     padding-top: 30px;
+     padding-left: 30px;
+     margin-right: 5px;
+     padding-bottom: 20px;
+     width: 25%;
+     color: var(--color-9);
+     background: var(--color-2);
+     border: 1px solid var(--color-7);
+     box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+     border-radius: 20px;
+     height: 90%;
+ }
+
+ .foto {
+     padding-bottom: 15px;
+     display: block;
+     width: 60%;
+     border-radius: 20px;
+     margin: 10px auto;
+     display: block;
+     transition: all 0.9s;
+ }
+
+ .foto:hover {
+     transform: scale(1.10);
+ }
+
+ .imagenIlustrativa {
+     padding-bottom: 15px;
+     display: block;
+     width: 60%;
+     border-radius: 20px;
+     margin: 10px auto;
+     display: block;
+     transition: all 0.9s;
+ }
+
+ .imagenIlustrativa:hover {
+     transform: scale(1.10);
+ }
+
+ .bloqueCentro {
+     padding-top: 20px;
+     padding-bottom: 60px;
+     margin-right: 5px;
+     width: 50%;
+     color: var(--color-9);
+     background: var(--color-2);
+     height: 90%;
+     border: 1px solid var(--color-7);
+     box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+     border-radius: 20px;
+ }
+
+ .textoCentrado {
+     text-align: center;
+     font-size: 40px;
+     padding-bottom: 50px;
+     font-family: font-shink;
+ }
+
+ .seccionesEvaluacion {
+     display: flex;
+     justify-content: center;
+ }
+
+ .iconoCard {
+     width: 100px;
+     height: 100px;
+     margin: 10px auto;
+     display: block;
+     transition: all 0.5s;
+ }
+
+ .card {
+     padding-top: 10px;
+     box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+     transition: 0.3s;
+     margin: 15px;
+     width: 200px;
+     display: block;
+     position: relative;
+     overflow: hidden;
+     border-radius: 20px;
+     text-align: center;
+ }
+
+ .card:hover {
+     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+ }
+
+ .container {
+     padding: 2px 16px;
+     font-size: 30px;
+     bottom: 0;
+     background: var(--color-5);
+     opacity: 0.6;
+     transform: translateY(100%);
+     transition: all 0.5s ease-out;
+ }
+
+ .container a {
+     color: var(--color-9);
+     text-decoration: none;
+     padding: 2px 0;
+ }
+
+ .container a h6 {
+     font-weight: bolder;
+ }
+
+ .card:hover .container {
+     transform: translateY(0%);
+ }
+
+ .card:hover .iconoCard {
+     transform: scale(1.60);
+ }
+
+ footer {
+     background-image: url("../ImagenesWeb/fondo.jpg");
+     /* The image used */
+     background-color: #cccccc;
+     /* Used if the image is unavailable */
+     background-position: center;
+     /* Center the image */
+     background-repeat: no-repeat;
+     /* Do not repeat the image */
+     background-size: cover;
+     /* Resize the background image to cover the entire container */
+ }
