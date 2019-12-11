@@ -144,7 +144,7 @@ td {
 
 td:hover {
     filter: invert(0.1);
-    color: red;
+    color: rgb(29, 82, 99);
 }
 
 #buscafecha {
@@ -153,6 +153,7 @@ td:hover {
     font-family: font-caviar;
     font-size: 20px;
     padding-left: 220px;
+    padding-top: 20px;
 }
 
 input[type=text] {

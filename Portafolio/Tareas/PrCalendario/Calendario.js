@@ -71,7 +71,7 @@ function escribirdias() {
             celda.innerHTML = midia;
 
             celda.style.backgroundColor = "#9bf5ff";
-            celda.style.color = "#8D3F36";
+            // celda.style.color = "#8D3F36";
 
             if (j == 6) {
                 celda.style.color = "#f11445";
