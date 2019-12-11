@@ -13,98 +13,105 @@
 </head>
 
 <body>
-    <h1>Mi Calendario - Lery Sanchez Calderón</h1>
+    <img class="imagen" src="../../../ImagenesWeb/femalecodertocat.png" alt="FemaleCode">
+    <header>
+        <h1>[Mi Calendario] </h1>
+        <h3>[Lery Sanchez Calderón]</h3>
+    </header>
     <div id="calendario">
-        <div id="anterior" onclick="mesantes()">
-            <!-- Area 1-->
-
-        </div>
-        <div id="posterior" onclick="mesdespues()">
-
-        </div>
-        <h2 id="titulos">
-
-        </h2>
-        <table id="diasc">
-            <!-- Area 2-->
-            <!--tr#fila>th*7-->
-            <tr id="fila0">
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            <!--tr#fila$*7>td*7-->
-            <tr id="fila1">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr id="fila2">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr id="fila3">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr id="fila4">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr id="fila5">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr id="fila6">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr id="fila7">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
         <!-- Area 3 -->
         <!-- #fechaactual>i{Hoy: } -->
-        <div id="fechaactual"><i onclick="actualizar()">Hoy: </i></div>
+        <div id="fechaactual"><i onclick="actualizar()">Hoy es: </i></div>
+
+        <div class="contenedor">
+            <div class="laterales">
+                <div id="anterior" onclick="mesantes()"></div>
+            </div>
+            <div class="contenidoPrincipal">
+                <h2 id="titulos"> </h2>
+                <table id="diasc">
+                    <!-- Area 2-->
+                    <!--tr#fila>th*7-->
+                    <tr id="fila0">
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <!--tr#fila$*7>td*7-->
+                    <tr id="fila1">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="fila2">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="fila3">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="fila4">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="fila5">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="fila6">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="fila7">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="laterales">
+                <div id="posterior" onclick="mesdespues()"></div>
+            </div>
+        </div>
         <!-- Area 4 -->
         <div id="buscafecha">
             <form action="#" name="buscar">
@@ -127,11 +134,11 @@
                     ...AÑO...
                     <input type="text" name="buscaanno" maxlength="4" size="4">
                     ...
-                    <input type="button" value="BUSCAR" onclick="mifecha()">
+                    <input type="button" value="Buscar" onclick="mifecha()">
                 </p>
+
             </form>
         </div>
-
     </div>
 </body>
 

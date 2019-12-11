@@ -1,6 +1,6 @@
-meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octurbre", "noviembre", "diciembre"]
+meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octurbre", "Noviembre", "Diciembre"]
 lasemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
-diassemana = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"]
+diassemana = ["L", "K", "M", "J", "V", "S", "D"]
 
 window.onload = function () {
     hoy = new this.Date();
@@ -71,7 +71,7 @@ function escribirdias() {
             celda.innerHTML = midia;
 
             celda.style.backgroundColor = "#9bf5ff";
-            celda.style.color = "#492736";
+            celda.style.color = "#8D3F36";
 
             if (j == 6) {
                 celda.style.color = "#f11445";
