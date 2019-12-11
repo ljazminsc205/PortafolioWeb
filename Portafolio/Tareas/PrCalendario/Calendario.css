@@ -97,11 +97,22 @@ body {
     font-size: 40px;
 }
 
+#fechaactual i {
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#fechaactual i:hover {
+    transform: scale(1.30);
+}
+
 #anterior, #posterior {
     font-family: font-hello;
     color: rgb(121, 55, 47);
     font-size: 40px;
     cursor: pointer;
+    padding: 20px;
 }
 
 #anterior::before {
@@ -113,6 +124,11 @@ body {
     border: 4px solid rgb(121, 55, 47);
     border-top: none;
     border-right: none;
+    transition: all 0.4s;
+}
+
+#anterior:hover {
+    transform: scale(1.10);
 }
 
 #posterior::after {
@@ -124,6 +140,11 @@ body {
     border: 4px solid rgb(121, 55, 47);
     border-bottom: none;
     border-left: none;
+    transition: all 0.4s;
+}
+
+#posterior:hover {
+    transform: scale(1.10);
 }
 
 #titulos {
@@ -157,24 +178,35 @@ td:hover {
 }
 
 input[type=text] {
-    width: 50px;
+    width: 60px;
+    height: 35px;
     color: rgb(29, 82, 99);
     font-size: 15px;
     font-family: font-caviar;
+    text-align: center;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 1px;
 }
 
 input[type=button] {
     width: 100px;
+    height: 35px;
     color: rgb(29, 82, 99);
     font-size: 15px;
     font-family: font-caviar;
     cursor: pointer;
+    border-radius: 7px;
+    border-style: solid;
 }
 
 select {
     color: rgb(29, 82, 99);
     font-size: 15px;
+    height: 35px;
     font-family: font-caviar;
+    border-radius: 7px;
+    border-style: solid;
 }
 
 .imagen {
@@ -186,6 +218,7 @@ select {
 
 .imagen:hover {
     animation: animacionImagen 0.4s;
+    transform: scale(1);
     cursor: pointer;
 }
 

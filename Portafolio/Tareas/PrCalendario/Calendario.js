@@ -17,7 +17,7 @@ window.onload = function () {
     f0 = document.getElementById("fila0");
 
     pie = document.getElementById("fechaactual");
-    pie.innerHTML += lasemana[diasemhoy] + ", " + diahoy + " de " + meses[meshoy] + " de " + annohoy;
+    pie.innerHTML += lasemana[diasemhoy] + ", " + diahoy + " de " + meses[meshoy] + ", " + annohoy;
 
     document.buscar.buscaanno.value = annohoy;
 
@@ -30,7 +30,7 @@ window.onload = function () {
 }
 
 function cabecera() {
-    tit.innerHTML = meses[mescal] + " de " + annocal;
+    tit.innerHTML = meses[mescal] + ",  " + annocal;
     mesant = mescal - 1;
     mespos = mescal + 1;
     if (mesant < 0) {
