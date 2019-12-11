@@ -152,7 +152,7 @@ td:hover {
     font-weight: bolder;
     font-family: font-caviar;
     font-size: 20px;
-    padding-left: 200px;
+    padding-left: 220px;
 }
 
 input[type=text] {
@@ -193,7 +193,7 @@ select {
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-20px);
     }
     100% {
         transform: translateY(0px);
