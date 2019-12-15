@@ -161,6 +161,12 @@
                                         Campo vacío.
                                     </div>
                                 </div>
+                                <div class="collapse" id="collapseExample5">
+                                    <div class="card card-body campoRequeridoEstilo">
+                                        La contraseña debe tener un tamaño minimo de 8 caracteres(mayúsculas,
+                                        minúsculas y números).
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="message-text" class="col-form-label">Reescriba la contraseña nueva*</label>
@@ -171,12 +177,17 @@
                                         Campo vacío.
                                     </div>
                                 </div>
+                                <div class="collapse" id="collapseExample6">
+                                    <div class="card card-body campoRequeridoEstilo">
+                                        La contraseñas debe ser igual a la anterior.
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <div type="submit"><a href="javascript:cerrarModalContrasennaCancelar();">Cancelar</a></div>
-                        <div type="submit"><a href="javascript:cerrarModalContrasenna();">Enviar
+                        <div type="submit"><a href="javascript:cerrarModalContrasenna(event);">Enviar
                                 solicitud</a></div>
                     </div>
                 </div>

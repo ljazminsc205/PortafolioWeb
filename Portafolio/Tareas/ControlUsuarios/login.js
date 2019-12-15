@@ -106,20 +106,37 @@ function mostrarModalContrasenna() {
     div.style.display = '';
 }
 
-function cerrarModalContrasenna() {
-    if (contrasennaActual.value == "" || contrasennaNueva.value == "" || contrasennaNueva2.value == "") {
-        campoLleno();
+function cerrarModalContrasenna(ev) {
+    var re = (/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/);
+    if (!re.test(contrasennaNueva.value)) {
+        $('#collapseExample5').collapse('show');
+        ev.preventDefault();
+
+    } else if (contrasennaNueva.value !== contrasennaNueva2.value) {
+        $('#collapseExample6').collapse('show');
+        ev.preventDefault();
     } else {
         div = document.getElementById('cambioContrasenna');
         div.style.display = 'none';
-        contrasennaActual.value = "";
-        contrasennaNueva.value = "";
-        contrasennaNueva2.value = "";
         $('#collapseExample').collapse('hide');
         $('#collapseExample2').collapse('hide');
         $('#collapseExample3').collapse('hide');
+        $('#collapseExample5').collapse('hide');
+        $('#collapseExample6').collapse('hide');
+        contrasennaActual.value = "";
+        contrasennaNueva.value = "";
+        contrasennaNueva2.value = "";
     }
 }
+
+contrasennaNueva.addEventListener('keyup', () => {
+    $('#collapseExample5').collapse('hide');
+})
+
+contrasennaNueva2.addEventListener('keyup', () => {
+    $('#collapseExample6').collapse('hide');
+})
+
 
 function campoLleno() {
     if (contrasennaActual.value == "") {
