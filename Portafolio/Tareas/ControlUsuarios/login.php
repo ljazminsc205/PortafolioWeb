@@ -1,3 +1,8 @@
+<?php
+session_start( );
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,10 +35,10 @@
 
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active estiloTab" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <form action="perfil.html" class="estiloForm">
+                    <form action="perfil.php" class="estiloForm" method = "post">
                         <div class="input-group inputs">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input type="email" class="form-control" id="email" placeholder="@email" required>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="@email" required>
                         </div>
                         <div class="input-group ">
                             <span class="input-group-addon "><i class="glyphicon glyphicon-lock"></i></span>
@@ -55,7 +60,7 @@
                     </form>
                 </div>
                 <div class="tab-pane fade estiloTab" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <form action="perfil.html">
+                    <form action="perfil.php">
 
                         <div class="row">
 
