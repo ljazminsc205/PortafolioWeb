@@ -29,7 +29,7 @@ const prueba = document.getElementsByClassName("nav-item");
 console.log(prueba);
 btnIniciarSesion.addEventListener('click', () => {
     contenedorRegistro.style.width = '30%';
-    email.value = "";
+    /*email.value = "";
     password.value = "";
 
     nombre.value = "";
@@ -38,21 +38,21 @@ btnIniciarSesion.addEventListener('click', () => {
     fechaNacimiento.value = "";
     emailRegistro.value = "";
     contrasennaRegistro.value = "";
-    login.value = "";
+    login.value = "";*/
 })
 btnRegistrarse.addEventListener('click', () => {
     contenedorRegistro.style.width = '60%';
-    email.value = "";
-    nombre.value = "";
-    apellidoRegistro.value = "";
-    contacto.value = "";
-    fechaNacimiento.value = "";
-    emailRegistro.value = "";
-    contrasennaRegistro.value = "";
-    login.value = "";
+    // email.value = "";
+    // nombre.value = "";
+    // apellidoRegistro.value = "";
+    // contacto.value = "";
+    // fechaNacimiento.value = "";
+    // emailRegistro.value = "";
+    // contrasennaRegistro.value = "";
+    // login.value = "";
 
-    email.value = "";
-    password.value = "";
+    // email.value = "";
+    // password.value = "";
 })
 
 

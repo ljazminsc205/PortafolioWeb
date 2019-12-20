@@ -1,3 +1,5 @@
+CREATE DATABASE controlusuarios;
+
 use controlusuarios;
 
 CREATE TABLE Usuarios (

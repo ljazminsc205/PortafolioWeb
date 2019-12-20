@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +16,8 @@
     <script defer src="./perfil.js"></script>
 </head>
 
-
-
 <body>
     <div class="fondo">
-
 
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark nombre-usuario">
@@ -34,17 +35,15 @@
                     <a class="nav-link" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">Salir</a>
+                    <a class="nav-link" href="login.php">Salir</a>
                 </li>
             </ul>
         </div>
         <div>
             <img class="foto-perfil" src="../../../ImagenesWeb/default-user.png" alt="foto perfil">
-            <span class="nombre-usuario">Lery Sánchez Calderón</span>
+            <span class="nombre-usuario"> <?php  echo  $_SESSION["nombre"]." ". $_SESSION["apellidos"]  ?> </span>
         </div>
     </nav>
-
-
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

@@ -15,6 +15,14 @@
     font-family: fontChampagne;
 }
 
+.mensajeError {
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    z-index: 5;
+    transform: translateX(-50%);
+}
+
 .contenidoPrincipal {
     display: flex;
     justify-content: center;
@@ -132,6 +140,7 @@
 .campoRequerido::after {
     content: "*";
 }
+
 
 /* Animacion-background */
 
