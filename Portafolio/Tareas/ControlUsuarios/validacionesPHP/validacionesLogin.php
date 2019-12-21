@@ -36,4 +36,37 @@ if ( isset($_POST["submit"])) {
         }
     }
 }
+
+    //Si se quiere generar una contraseña
+function generarContrasenna(){
+    //Carácteres para la contraseña
+    $str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+    $password = "";
+    //Reconstruimos la contraseña segun la longitud que se quiera
+    for($i=0;$i<10;$i++) {
+        //obtenemos un caracter aleatorio escogido de la cadena de caracteres
+        $password .= substr($str,rand(0,62),1);
+    }
+    //Mostramos la contraseña generada
+    return $password;
+}
+
+if(isset($_POST["submit2"])){
+    $email = $_POST["email"] ;
+
+    if(empty($email)){
+        header("Location: ../login.php?error=IngreseCorreo");
+        exit();
+    }
+    
+    $contrasennaNueva =  generarContrasenna();
+    $consulta = new ControllerDB();
+    $consulta->reestablecerContrasenna ( $email , $contrasennaNueva);
+    header("Location: ../login.php?error=ingreso&correo=".$email);
+    exit();
+
+    }
+
+
+
 ?>

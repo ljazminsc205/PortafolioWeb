@@ -84,14 +84,20 @@ session_start();
                             if(isset($_GET["error"])) 
                             {
                                 $mensajeError="";
+                                $colorAlerta="danger";
 
                                 if ($_GET["error"] == "Campos_vacios") {
                                     $mensajeError = "Campos vacíos"; 
                                 }elseif($_GET["error"] == "Credenciales_incorrectas"){
                                     $mensajeError = "Credenciales incorrectas";
+                                }elseif($_GET["error"] == "IngreseCorreo"){
+                                    $mensajeError = "Por favor ingrese un correo";
+                                }elseif($_GET["error"] =="ingreso" ){
+                                    $mensajeError = "La contraseña ha sido enviada al correo: <strong>".$_GET["correo"]."</strong>"; 
+                                    $colorAlerta = "success";
                                 }
                                 ?>
-                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <div class="alert alert-<?php echo $colorAlerta?> alert-dismissible fade show" role="alert">
                                     <?php echo $mensajeError ?>
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -100,11 +106,9 @@ session_start();
                                 <?php
                             }
                         ?>
-                        <div class="textoFont">
-                            <a href="javascript:modal();">Olvidé mi
-                                contraseña</a>
-                            <br>
-                            <a data-toggle= "modal" data-target = "#cambioContrasenna" >Restablecer contraseña</a>
+                        <div class="botonIngresar">
+                            <button id="btnIngresar" type="submit" name = "submit2" class="btn-block boton "><a class="aFont"
+                                href="#"></a>Olvidé mi contrasenna </a></button>
                         </div>
 
                         <div class="botonIngresar">
@@ -155,12 +159,6 @@ session_start();
                                     <label for="formGroupExampleInput">Contraseña*</label>
                                     <input type="password" class="form-control" id="contrasennaRegistro" name="contrasennaRegistro"
                                         placeholder="Contraseña" >
-                                    <div class="collapse" id="collapseExample4">
-                                        <div class="card card-body campoRequeridoEstilo">
-                                            La contraseña debe tener un tamaño minimo de 8 caracteres(mayúsculas,
-                                            minúsculas y números).
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="col">
                                     <label for="inputEmail4">Login de indentificación*</label>
@@ -182,75 +180,6 @@ session_start();
             </div>
 
         </div>
-        <div id="flotante" class="formaModal" style="display:none;" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div id="modalBody" class="modal-body">
-                        ""
-                    </div>
-                    <div class="modal-footer">
-                        <div id="close"><a href="javascript:cerrarModalConfimacion();">Cerrar</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="cambioContrasenna" class=" modal fade " tabindex="-1" role="dialog"  >
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div id="bodyModal" class="modal-body">
-                        <form action="./validacionesPHP/validacionesCambioContrasenna.php" class="form-group" method = "post">
-                            <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Ingrese la contraseña actual*</label>
-                                <input type="password" class="form-control" id="contrasennaActual"  name= "contrasennaActual" placeholder="Contraseña actual">
-
-                                <div class="collapse" id="collapseExample">
-                                    <div class="card card-body campoRequeridoEstilo"> Campo vacío.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Ingrese la contraseña nueva*</label>
-                                <input type="password" class="form-control" id="contrasennaNueva" name="contrasennaNUeva"
-                                    placeholder="Contraseña nueva">
-                                <div class="collapse" id="collapseExample2">
-                                    <div class="card card-body campoRequeridoEstilo">
-                                        Campo vacío.
-                                    </div>
-                                </div>
-                                <div class="collapse" id="collapseExample5">
-                                    <div class="card card-body campoRequeridoEstilo">
-                                        La contraseña debe tener un tamaño minimo de 8 caracteres(mayúsculas,
-                                        minúsculas y números).
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="message-text" class="col-form-label">Reescriba la contraseña nueva*</label>
-                                <input type="password" class="form-control" id="contrasennaNueva2" name = "contrasennaNueva2"placeholder="Contraseña nueva"></textarea>
-                                <div class="collapse" id="collapseExample3">
-                                    <div class="card card-body campoRequeridoEstilo"> Campo vacío.</div>
-                                </div>
-                                <div class="collapse" id="collapseExample6">
-                                    <div class="card card-body campoRequeridoEstilo">
-                                        La contraseñas debe ser igual a la anterior.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <div><button data-dismiss = "modal" >Cancelar</a></div>
-                                <div><button type="submit" name = "submit" >Enviar solicitud</button></div>
-                            </div>
-
-                        </form>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-
 
     </div>
 
@@ -287,3 +216,4 @@ session_start();
 </body>
 
 </html>
+

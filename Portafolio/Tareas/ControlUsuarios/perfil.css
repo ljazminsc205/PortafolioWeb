@@ -38,3 +38,19 @@
     color: white;
     font-size: 1.2em;
 }
+
+.centrarAlert {
+    position: absolute;
+    top: 13vh;
+    left: 50%;
+    z-index: 5;
+    transform: translateX(-50%);
+}
+
+/* .centrarAlert {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */

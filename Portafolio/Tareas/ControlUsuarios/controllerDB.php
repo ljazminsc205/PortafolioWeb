@@ -24,9 +24,6 @@ class ControllerDB
         $conexion->consultar($sql_query);
     }
 
-    public function recuperarContrasenna(){
-
-    }
     
     public function insertarUsuario( $email, $contrasenna, $nombreUsuario, $nombre, $apellidos, $fechaNacimiento, $telefono  ){
         $sql_query = "insert into Usuarios(email, contrasenna, nombreUsuario, nombre, apellidos, fechaNacimiento, telefono) values('".$email."' , '".$contrasenna."' , '".$nombreUsuario."' ,'".$nombre."','".$apellidos."', '".$fechaNacimiento."','".$telefono."');";
@@ -54,6 +51,13 @@ class ControllerDB
         }else{
             return FALSE;
         }
+    }
+
+    public function verificarContrasenna( $email){
+        $sql_query = "select contrasenna from Usuarios where email = '".$email."';" ; 
+        $conexion= new ConexionBD(); 
+        $resultado = $conexion->consultar($sql_query);
+        return $resultado->fetch_assoc();
     }
 
 

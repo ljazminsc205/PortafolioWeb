@@ -104,6 +104,9 @@
     padding-top: 4%;
     padding-bottom: 2%;
     text-align: center;
+    background: rgb(16, 79, 95);
+    border: none;
+    color: white;
 }
 
 .textoFont a {
@@ -140,7 +143,6 @@
 .campoRequerido::after {
     content: "*";
 }
-
 
 /* Animacion-background */
 
