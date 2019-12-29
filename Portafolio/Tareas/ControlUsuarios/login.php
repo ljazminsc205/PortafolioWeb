@@ -46,7 +46,6 @@ session_start();
 ?>
     <div class="contenidoPrincipal">
         <div class="cajon" id="cajon">
-            <!-- Tomado de Boostrap -->
             <ul class="nav nav-tabs " id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active estiloNav" id="home-tab" data-toggle="tab" href="#home" role="tab"
@@ -95,7 +94,11 @@ session_start();
                                 }elseif($_GET["error"] =="ingreso" ){
                                     $mensajeError = "La contraseña ha sido enviada al correo: <strong>".$_GET["correo"]."</strong>"; 
                                     $colorAlerta = "success";
+                                }elseif($_GET["error"] == "correoSinEnviar"){
+                                    $mensajeError = "El correo no pudo ser enviado" ;
                                 }
+
+                                
                                 ?>
                                     <div class="alert alert-<?php echo $colorAlerta?> alert-dismissible fade show" role="alert">
                                     <?php echo $mensajeError ?>

@@ -2,6 +2,9 @@
 session_start( );
 
 include "../controllerDB.php";
+require './phpMailer/PHPMailerAutoload.php' ;
+
+
 
 if ( isset($_POST["submit"])) {
     $email_login = $_POST["email"];
@@ -58,15 +61,52 @@ if(isset($_POST["submit2"])){
         header("Location: ../login.php?error=IngreseCorreo");
         exit();
     }
-    
-    $contrasennaNueva =  generarContrasenna();
+
     $consulta = new ControllerDB();
-    $consulta->reestablecerContrasenna ( $email , $contrasennaNueva);
-    header("Location: ../login.php?error=ingreso&correo=".$email);
-    exit();
+    $resultado = $consulta->obtenerUsuario($email);
+    
+    if ($resultado==FALSE){
+        header("Location: ../login.php?error=correoSinEnviar"); 
+        exit();
+    }
+    
+        $contrasennaNueva =  generarContrasenna();
+
+        $mail = new PHPMailer;
+        
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = "ssl://smtp.gmail.com";   // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'introweb.verano2019@gmail.com';                 // SMTP username
+        $mail->Password = 'introweb2019';                           // SMTP password
+        $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 465;  
+        
+        $mail->setFrom('introweb.verano2019@gmail.com');
+        $mail->addAddress($email);     // Add a recipient
+        
+        $mail->isHTML(true);                                  // Set email format to HTML
+        
+        $mail->Subject = 'Restablecimiento de contraseña';
+        $mail->Body    = $contrasennaNueva ;
+
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        
+        if(!$mail->send()) {
+            // echo 'Message could not be sent.-----<br>';
+            // echo 'Mailer Error: ' . $mail->ErrorInfo;
+            header("Location: ../login.php?error=correoSinEnviar");
+            exit();
+        } else {
+            // echo 'Message has been sent';
+            header("Location: ../login.php?error=ingreso&correo=".$email);
+            $consulta = new ControllerDB();
+            $consulta->reestablecerContrasenna ( $email , $contrasennaNueva);
+
+            exit();
+        }
 
     }
-
 
 
 ?>
