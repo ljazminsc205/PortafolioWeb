@@ -88,7 +88,18 @@ if(isset($_POST["submit2"])){
         $mail->isHTML(true);                                  // Set email format to HTML
         
         $mail->Subject = 'Restablecimiento de contraseña';
-        $mail->Body    = $contrasennaNueva ;
+        $mail->Body = '<html>'.
+                        '<head><title>Restablecimiento de contraseña</title></head>'.
+                        '<body><h2>Restablecimiento de contraseña</h2>'.
+                        '<hr>'.
+                        'Ha solicitado el reestablecimiento de su contraseña, por lo que hemos generado una contraseña temporal:   '.
+                        '<h1>'.$contrasennaNueva.'</h1>'.                   
+                        '<hr>'.
+                        'Enviado por mi programa en PHP'.
+                        '</body>'.
+                        '</html>';
+
+        // .$contrasennaNueva ;
 
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
         
