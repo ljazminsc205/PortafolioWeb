@@ -133,30 +133,58 @@ session_start();
                                 } else {
                                     echo "";
                                 }
-                            ?>">
+                            ?>" >
 
                             </div>
                             <div class="col">
                                 <label for="apellidoRegistro">Apellidos*</label>
-                                <input id="apellidoRegistro" name="apellidosRegistro" type="text" class="form-control" placeholder="Apellidos">
+                                <input id="apellidoRegistro" name="apellidosRegistro" type="text" class="form-control" placeholder="Apellidos"
+                                value="<?php 
+                                if(isset($_SESSION["apellido-registro"])){
+                                    echo $_SESSION["apellido-registro"];
+                                } else {
+                                    echo "";
+                                }
+                            ?>">
+                                
                             </div>
                             <div class="col">
                                 <label for="formGroupExampleInput2">Contacto*</label>
                                 <input type="tel" class="form-control" id="contacto" placeholder="8888-88-88"
-                                    name="telefonoRegistro" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" >
+                                    name="telefonoRegistro" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" 
+                                    value="<?php 
+                                if(isset($_SESSION["telefono-registro"])){
+                                    echo $_SESSION["telefono-registro"];
+                                } else {
+                                    echo "";
+                                }
+                            ?>">
                             </div>
 
                         </div>
                         <div class="form-group">
                             <label for="start">Fecha de nacimiento*</label>
-                            <input type="date" class="form-control" id="start" name="trip-start" >
+                            <input type="date" class="form-control" id="start" name="trip-start"
+                            value="<?php 
+                                if(isset($_SESSION["fecha-registro"])){
+                                    echo $_SESSION["fecha-registro"];
+                                } else {
+                                    echo "";
+                                }
+                            ?>" >
                                 
                         </div>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col">
                                     <label for="inputEmail4">Correo electrónico*</label>
-                                    <input type="email" class="form-control" id="emailRegistro" name="emailRegistro" placeholder="@email">
+                                    <input type="email" class="form-control" id="emailRegistro" name="emailRegistro" placeholder="@email" value="<?php 
+                                if(isset($_SESSION["email-registro"])){
+                                    echo $_SESSION["email-registro"];
+                                } else {
+                                    echo "";
+                                }
+                            ?>">
                                 </div>
                                 <div class="col">
                                     <label for="formGroupExampleInput">Contraseña*</label>
