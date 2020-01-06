@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hola mundo con Vue.js</title>
+</head>
+
+<!-- Se debe encerrar todo lo que queremos que sea de Vue.js en un container. -->
+
+<body>
+    <!-- Video1 -->
+    <!-- Aqui va todo el contenido que se va a tabajar de Vue.js -->
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <ul>
+            <!-- ciclo for listas -->
+            <li v-for="fruta of frutas"> {{fruta}}</li>
+        </ul>
+        <ul>
+            <!--For con objetos-->
+            <li v-for="x of nombres">{{x.cantidad}} - {{x.nombre}}
+                <!-- if(cuando cantidad sea cero) -->
+                <span v-if="x.cantidad === 0">-Sin stock</span>
+            </li>
+        </ul>
+        <!-- Video2 -->
+        <!-- conexion directa entre htmly javascript -->
+        <!-- Se guarda en tiempo real lo que escribimos en el input -->
+        <input type="text" v-model="nuevaFruta">
+
+        <!-- llamar una funcion -->
+        <button v-on:click="agregarFruta">Agregar</button>
+
+        <!-- otra forma mas abreviada -->
+        <button @click="agregarFruta">Agregar Otra forma</button>
+        <button @mouseout="agregarFruta">Prueba</button>
+
+        <!-- Para agregar una fruta, presionando el Enter-->
+        <input type="text" v-model="nuevaFruta" @keyup.Enter="agregarFruta">
+        <!-- tambien existe .delete .tab y otros... https://vuejs.org/v2/guide/events.html#Key-Modifiers -->
+
+        <ul>
+            <!--Para modificar la cantidad-->
+            <li v-for="x of nombres">
+                <!-- para modificar la cantidad -->
+                <input type="numeric" v-model.number="x.cantidad">
+                <!-- v-model.number para transformar el tipo de dato -->
+                {{x.nombre}}
+                <!-- if(cuando cantidad sea cero) -->
+                <button @click="x.cantidad = x.cantidad+1">+</button>
+                <span v-if="x.cantidad === 0">-Sin stock</span>
+            </li>
+        </ul>
+        <h4>total: {{sumarFrutas}}</h4>
+    </div>
+
+
+    <!-- Se pega el src de nuestro .js y el de vue.js -->
+
+    <script src="https://cdn.jsdelivr.net/vue/2.1.3/vue.js"> </script>
+    <script src="01.js"></script>
+</body>
+
+</html>
