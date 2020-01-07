@@ -1,0 +1,73 @@
+# Introducción al desarrollo de páginas Web Lery Sánchez Calderón                 2016254672                                             Verano 2019-2020
+
+# Taller Django
+
+###### Instalación de la tecnología:
+
+No hubieron problemas al instalar la tecnología, ya que el manual de instalación facilitado por los compañeros estaba muy completo.
+
+###### Aspectos más relevantes:
+
+- Creado en la empresa '*The Only World'*, por Adrian Holovaty y Simon Willison en el 2003.
+- En el 2005 obtiene una licencia de dominio público.
+- Su nombre se debe a un guitarrista.
+- Caracteristicas:
+  1. Open Source(muy compatible con Oracle, PostgresSQL, MariaBD, MySQL).
+  2. Comunidad bastante activa.
+  3. Entre sus capas no existe ninguna relación, en cada capa se le asignan recursos.
+  4. Tiene un sistema de caché muy potente.
+- Principios:
+  1. Las capas no deben conocerse entre ellas ni sus componentes.
+  2. No repetir el código.
+  3. Lo explicito es mejor que lo implicito.
+- Arquitectura:
+  1. ORM (toma las clases de un objeto y las manda de una vez en una base de datos).
+  2. Patrón de diseno MTV, muy parecida al MVC.
+     - Model: En la clase model se especifica el tipo de dato que van a tenr los atributos.
+     - Template: capa que persiben los usuarios, en MVC es la vista.
+     - View: Detecta si es un post y si es un post, hace un .save, en MVC es el controlador.
+- Ventajas:
+  1. Es muy completo (documentación extensa).
+  2. Es portable(programado en Python).
+  3. Multiplataforma.
+  4. Desarrollo rápido.
+  5. Es reutilizable.
+  6. Open Source.
+- Desventajas:
+  1. Por su extensa documentación puede haber confusión.
+  2. Puede ser más dificil que otros lenguajes.
+- Ejemplos de aplicaciones:
+  1. Dropbox.
+  2. Instagram.
+  3. YouTube.
+  4. The new work times.
+  5. Bitbucket.
+  6. Pinterest.
+  7. Nasa.
+
+###### Descripción del ejercicio a realizar:
+
+En el taller realizado se debia realizar un interfaz que me permitiera añadir, eliminar y editar una tarea, además de marcarla como realizada y desmarcarla, utilizando la tecnologia expuesta en el taller.
+
+###### Evidencias visuales:
+
+######  ![9b4cc201-309d-4f46-91c3-7bb8f184c66c](/home/lery/Escritorio/PortafolioWeb/Tecnologias/Django/Img/9b4cc201-309d-4f46-91c3-7bb8f184c66c.jpeg)
+
+​							 *Figura 1: Tarea Web ha sido marcada como realizada.*
+
+![021c3a5b-fe21-41a8-965c-d35f71a9e0be](/home/lery/Escritorio/PortafolioWeb/Tecnologias/Django/Img/021c3a5b-fe21-41a8-965c-d35f71a9e0be.jpeg)
+
+​								 *Figura 2: Comprar cosas es la única tarea agregada.*
+
+![264db7b3-fdb1-41ef-af71-b1c715a24ca9](/home/lery/Escritorio/PortafolioWeb/Tecnologias/Django/Img/264db7b3-fdb1-41ef-af71-b1c715a24ca9.jpeg)
+
+​										*Figura 3: Tarea Web ha sido eliminada.*
+
+![bb2d7034-665b-435b-a16e-14a654ea4f29](/home/lery/Escritorio/PortafolioWeb/Tecnologias/Django/Img/bb2d7034-665b-435b-a16e-14a654ea4f29.jpeg)
+
+​										*Figura 4: Tarea Web ha sido agregada.*
+
+
+
+
+
