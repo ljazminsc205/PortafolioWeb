@@ -1,0 +1,20 @@
+<p>formulario-registro works!</p>
+<form id="form_usuarios">
+    <h1>Registro de usuario:</h1>
+    <h2>Nombre: </h2>
+    <input type="text" class="textfield" name="nombre" [(ngModel)]="usuario.nombre" />
+    <h2>Apellidos: </h2>
+    <input type="text" class="textfield" name="var" [(ngModel)]="usuario.apellidos" />
+    <h2>Cedula: </h2>
+    <input type="text" class="textfield" name="var" [(ngModel)]="usuario.cedula" />
+    <h2>Correo: </h2>
+    <input type="text" class="textfield" name="var" [(ngModel)]="usuario.correo" />
+    <h2>Teléfono: </h2>
+    <input type="text" class="textfield" name="telefono" [(ngModel)]="usuario.telefono" />
+    <h2>Edad: </h2>
+    <input type="text" class="textfield" name="edad" [(ngModel)]="usuario.edad" />
+    <br>
+    <br>
+    <button type="submit" form="form_usuarios" value="Submit" (click)="this.nuevoUsuario()">Agregar
+    usuario</button>
+</form>

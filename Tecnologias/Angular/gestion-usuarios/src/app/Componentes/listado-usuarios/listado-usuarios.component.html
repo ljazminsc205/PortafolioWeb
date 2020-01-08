@@ -1,0 +1,25 @@
+<p>listado-usuarios works!</p>
+<h1>Listado de usuarios</h1>
+<div *ngIf="! usuarios.length">
+    <h2>No hay usuarios por el momento</h2>
+</div>
+<div>
+    <div *ngIf=" usuarios.length">
+        <article>
+            <span><b>Nombre</b></span>
+            <span><b>Apellidos</b></span>
+            <span><b>Cédula</b></span>
+            <span><b>Correo</b></span>
+            <span><b>Teléfono</b></span>
+            <span><b>Edad</b></span>
+        </article>
+    </div>
+    <article *ngFor="let usuario of usuarios">
+        <span>{{usuario.nombre}}</span>
+        <span>{{usuario.apellidos}}</span>
+        <span>{{usuario.cedula}}</span>
+        <span>{{usuario.correo}}</span>
+        <span>{{usuario.telefono}}</span>
+        <span>{{usuario.edad}}</span>
+    </article>
+</div>
