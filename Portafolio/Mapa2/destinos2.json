@@ -1,0 +1,12 @@
+[
+    { "nombre": "Parque Ambiental Río Loro", "coordenadas": [9.8865035, -83.947397] },
+    { "nombre": "Jardín Botánico Lankester", "coordenadas": [9.83935, -83.89015] },
+    { "nombre": "Mirador de Ujarras", "coordenadas": [9.8360297, -83.8433803] },
+    { "nombre": "Mirador de Orosi", "coordenadas": [9.8186699, -83.8604253] },
+    { "nombre": "Parque Nacional Tapanti", "coordenadas": [9.7689177, -83.8010824] },
+    { "nombre": "Monumento Nacional Guayabo", "coordenadas": [9.9727558, -83.6929656] },
+    { "nombre": "Charrara Pura Vida", "coordenadas": [9.8912725, -83.8935526] },
+    { "nombre": "Sanatorio Dúran", "coordenadas": [9.93297, -83.88338] },
+    { "nombre": "Bosque Prusia", "coordenadas": [9.95732, -83.87626] },
+    { "nombre": "Parque Nacional Volcán Irazú", "coordenadas": [9.9804, -83.8538] }
+]
