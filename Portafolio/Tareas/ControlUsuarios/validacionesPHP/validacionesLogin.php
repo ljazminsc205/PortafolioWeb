@@ -77,12 +77,12 @@ if(isset($_POST["submit2"])){
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = "ssl://smtp.gmail.com";   // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = 'introweb.verano2019@gmail.com';                 // SMTP username
-        $mail->Password = 'introweb2019';                           // SMTP password
+        $mail->Username = 'introweb.introweb@gmail.com';                 // SMTP username
+        $mail->Password = 'CORREOweb2020';                           // SMTP password
         $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 465;  
         
-        $mail->setFrom('introweb.verano2019@gmail.com');
+        $mail->setFrom('introweb.introweb@gmail.com');
         $mail->addAddress($email);     // Add a recipient
         
         $mail->isHTML(true);                                  // Set email format to HTML
